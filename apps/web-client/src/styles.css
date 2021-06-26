@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* imports from base */
+  /* @import url('./theme/tailwindcss/01-base/your-file'); */
+}
+
+@layer components {
+  /* imports from components */
+  /* @import url('./theme/tailwindcss/02-components/your-file'); */
+}
+
+@layer utilities {
+  /* imports from utilities */
+  /* @import url('./theme/tailwindcss/03-utilities/your-file'); */
+}

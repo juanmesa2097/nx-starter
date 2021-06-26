@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-starter/shared/directives": ["libs/shared/directives/src/index.ts"],
+      "@nx-starter/shared/pipes": ["libs/shared/pipes/src/index.ts"],
+      "@nx-starter/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@nx-starter/shared/utils": ["libs/shared/utils/src/index.ts"],
+      "@nx-starter/shell/feature": ["libs/shell/feature/src/index.ts"],
+      "@nx-starter/shell/ui": ["libs/shell/ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

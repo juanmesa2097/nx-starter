@@ -19,6 +19,27 @@
     }
   },
   "projects": {
+    "shared-assets": {
+      "tags": ["type:assets", "scope:global"]
+    },
+    "shared-directives": {
+      "tags": ["type:ui", "scope:web"]
+    },
+    "shared-pipes": {
+      "tags": ["type:ui", "scope:web"]
+    },
+    "shared-ui": {
+      "tags": ["type:ui", "scope:web"]
+    },
+    "shared-utils": {
+      "tags": ["type:utils", "scope:global"]
+    },
+    "shell-feature": {
+      "tags": ["type:shell", "scope:web"]
+    },
+    "shell-ui": {
+      "tags": ["type:shell", "scope:web"]
+    },
     "web-client": {
       "tags": []
     },

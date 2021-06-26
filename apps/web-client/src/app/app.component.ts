@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'nx-starter-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  template: `<router-outlet></router-outlet>`,
 })
-export class AppComponent {
-  title = 'web-client';
-}
+export class AppComponent {}

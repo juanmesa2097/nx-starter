@@ -1,6 +1,258 @@
 {
   "version": 1,
   "projects": {
+    "shared-assets": {
+      "root": "libs/shared/assets",
+      "sourceRoot": "libs/shared/assets/src",
+      "projectType": "library",
+      "architect": {}
+    },
+    "shared-directives": {
+      "projectType": "library",
+      "root": "libs/shared/directives",
+      "sourceRoot": "libs/shared/directives/src",
+      "prefix": "nx-starter",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/shared/directives"],
+          "options": {
+            "project": "libs/shared/directives/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/directives/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/directives/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/directives"],
+          "options": {
+            "jestConfig": "libs/shared/directives/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/directives/src/**/*.ts",
+              "libs/shared/directives/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-pipes": {
+      "projectType": "library",
+      "root": "libs/shared/pipes",
+      "sourceRoot": "libs/shared/pipes/src",
+      "prefix": "nx-starter",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/shared/pipes"],
+          "options": {
+            "project": "libs/shared/pipes/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/pipes/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/pipes/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/pipes"],
+          "options": {
+            "jestConfig": "libs/shared/pipes/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/pipes/src/**/*.ts",
+              "libs/shared/pipes/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-ui": {
+      "projectType": "library",
+      "root": "libs/shared/ui",
+      "sourceRoot": "libs/shared/ui/src",
+      "prefix": "nx-starter",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/shared/ui"],
+          "options": {
+            "project": "libs/shared/ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui"],
+          "options": {
+            "jestConfig": "libs/shared/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/src/**/*.ts",
+              "libs/shared/ui/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-utils": {
+      "projectType": "library",
+      "root": "libs/shared/utils",
+      "sourceRoot": "libs/shared/utils/src",
+      "prefix": "nx-starter",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/shared/utils"],
+          "options": {
+            "project": "libs/shared/utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/utils/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shared/utils/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/utils"],
+          "options": {
+            "jestConfig": "libs/shared/utils/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/utils/src/**/*.ts",
+              "libs/shared/utils/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shell-feature": {
+      "projectType": "library",
+      "root": "libs/shell/feature",
+      "sourceRoot": "libs/shell/feature/src",
+      "prefix": "nx-starter",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/shell/feature"],
+          "options": {
+            "project": "libs/shell/feature/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shell/feature/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shell/feature/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shell/feature"],
+          "options": {
+            "jestConfig": "libs/shell/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shell/feature/src/**/*.ts",
+              "libs/shell/feature/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shell-ui": {
+      "projectType": "library",
+      "root": "libs/shell/ui",
+      "sourceRoot": "libs/shell/ui/src",
+      "prefix": "nx-starter",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/shell/ui"],
+          "options": {
+            "project": "libs/shell/ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shell/ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/shell/ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shell/ui"],
+          "options": {
+            "jestConfig": "libs/shell/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shell/ui/src/**/*.ts",
+              "libs/shell/ui/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "web-client": {
       "projectType": "application",
       "root": "apps/web-client",
@@ -18,7 +270,12 @@
             "tsConfig": "apps/web-client/tsconfig.app.json",
             "assets": [
               "apps/web-client/src/favicon.ico",
-              "apps/web-client/src/assets"
+              "apps/web-client/src/assets",
+              {
+                "glob": "**/*",
+                "input": "libs/shared/assets/src/assets",
+                "output": "assets"
+              }
             ],
             "styles": ["apps/web-client/src/styles.css"],
             "scripts": []
