@@ -5,5 +5,6 @@ import { WEB_SHELL_ROUTES } from './web-shell.routes';
 
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(WEB_SHELL_ROUTES)],
+  exports: [RouterModule],
 })
 export class WebShellModule {}
