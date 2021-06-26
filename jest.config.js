@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/libs/shared/directives',
     '<rootDir>/libs/shared/pipes',
     '<rootDir>/libs/shared/ui',
+    '<rootDir>/libs/shared/utils',
   ],
 };
