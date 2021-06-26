@@ -34,6 +34,12 @@
     "shared-utils": {
       "tags": ["type:utils", "scope:global"]
     },
+    "shell-feature": {
+      "tags": ["type:shell", "scope:web"]
+    },
+    "shell-ui": {
+      "tags": ["type:shell", "scope:web"]
+    },
     "web-client": {
       "tags": []
     },

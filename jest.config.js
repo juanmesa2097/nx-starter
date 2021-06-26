@@ -5,5 +5,7 @@ module.exports = {
     '<rootDir>/libs/shared/pipes',
     '<rootDir>/libs/shared/ui',
     '<rootDir>/libs/shared/utils',
+    '<rootDir>/libs/shell/ui',
+    '<rootDir>/libs/shell/feature',
   ],
 };
