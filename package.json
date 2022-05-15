@@ -80,7 +80,7 @@
     "jest-preset-angular": "9.0.3",
     "ng-packagr": "^12.1.0-next.0",
     "prettier": "2.2.1",
-    "standard-version": "^9.3.0",
+    "standard-version": "9.5.0",
     "tailwindcss": "^2.2.4",
     "ts-jest": "27.0.3",
     "ts-node": "~9.1.1",
